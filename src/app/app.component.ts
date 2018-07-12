@@ -16,8 +16,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    let obs = this.http.get("https://api.github.com/users/tmedinger")
-    obs.subscribe((response) => console.log(response));
+    
   }
 
 

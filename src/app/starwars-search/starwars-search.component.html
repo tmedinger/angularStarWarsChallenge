@@ -1,11 +1,12 @@
 <div>
   <select [(ngModel)]="headingTerm">
     <option value="people">People</option>
-    <option value="ships">Ships</option>
+    <option value="starships">Ships</option>
     <option value="films">Films</option>
   </select>
   <input type="text" placeholder="search" [(ngModel)]="searchTerm" />
   <button (click)="search()">Search</button>
-
-  <p>{{response}}</p>
+  <div *ngIf="response">
+    <p>{{response | json}}</p>
+  </div>
 </div>
